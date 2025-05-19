@@ -3231,7 +3231,7 @@
 											"top": 732,
 											"width": 183,
 											"height": 13,
-											"text": "Manager"
+											"text": "Admin"
 										},
 										{
 											"_type": "LabelView",
@@ -6229,7 +6229,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Manager",
+					"name": "Admin",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
