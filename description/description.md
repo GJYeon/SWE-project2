@@ -6,4 +6,3 @@
 | 자전거 등록 | **Actor Action**<br>1. 사용자가 3 1과 함께 자전거ID, 자전거 제품명을 입력한다.<br>**System Response**<br>2. 시스템은 자전거ID, 자전거 제품명을 출력한다 |
 | 자전거 대여 | **Actor Action**<br>1. 사용자가 4 1와 자전거ID를 입력한다.<br>**System Response**<br>2. 시스템은 자전거ID, 자전거 제품명을 출력한다 |
 | 자전거 대여 리스트 | **Actor Action**<br>1. 사용자가 5 1을 입력한다.<br>**System Response**<br>2. 시스템은 자전거ID, 자전거 제품명와 같은 자전거 정보 목록을 출력한다 |
-| 시스템 종료 | **Actor Action**<br>1. 사용자가 6 1을 입력한다.<br>**System Response**<br>2. 시스템이 종료된다. |
