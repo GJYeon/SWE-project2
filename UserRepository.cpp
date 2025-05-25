@@ -3,16 +3,10 @@
 void UserRepository::addUser(User* user) {
     users.push_back(user);
 }
-
 User* UserRepository::findUserById(string id) {
-    for (auto& user : users) {
-        if (user.getId() == id) {
-            return &user;
-        }
+    for (User* u : users) {
+        if (u->getId() == id) return u;
     }
     return nullptr;
 }
-
-std::vector<User>& UserRepository::getAllUsers() {
-    return users;
-}
+vector<User*>& UserRepository::getAllUsers() { return users; }

@@ -7,12 +7,12 @@
 
 class UserRepository {
 private:
-    std::vector<User> users;
+    vector<User*> users;
 
 public:
     void addUser(User* user);
     User* findUserById(string id);
-    std::vector<User>& getAllUsers();
+    vector<User*>& getAllUsers();
 };
 
 #endif

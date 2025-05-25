@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AddBIkeControl.cpp" />
+    <ClCompile Include="AddBikeUI.cpp" />
     <ClCompile Include="Bike.cpp" />
     <ClCompile Include="BikeRepository.cpp" />
     <ClCompile Include="LoginManager.cpp" />
@@ -134,15 +136,19 @@
     <ClCompile Include="LogoutUI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SignUpControl.cpp" />
+    <ClCompile Include="SignUpUI.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="UserRepository.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddBikeControl.h" />
+    <ClInclude Include="AddBikeUI.h" />
     <ClInclude Include="Bike.h" />
     <ClInclude Include="BikeRepository.h" />
     <ClInclude Include="LoginUI.h" />
     <ClInclude Include="LogoutUI.h" />
     <ClInclude Include="SignUpControl.h" />
+    <ClInclude Include="SignUpUI.h" />
     <ClInclude Include="UserRepository.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="LoginManager.h" />

@@ -42,6 +42,15 @@
     <ClCompile Include="SignUpControl.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="SignUpUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBIkeControl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBikeUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
@@ -66,6 +75,15 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="SignUpControl.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SignUpUI.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AddBikeControl.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AddBikeUI.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
