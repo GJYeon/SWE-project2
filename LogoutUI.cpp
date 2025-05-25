@@ -13,5 +13,5 @@ void LogoutUI::logout(ofstream& out_fp) {
 }
 void LogoutUI::startInterface(ifstream& in_fp, ofstream& out_fp) {
     out_fp << "2.2. ·Î±×¾Æ¿ô" << endl;
-    logout();
+    logout(out_fp);
 }

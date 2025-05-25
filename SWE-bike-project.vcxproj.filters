@@ -57,6 +57,18 @@
     <ClCompile Include="RentBikeUI.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ShowBikeInfoControl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowBikeInfoUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ExitUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ExitControl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
@@ -96,6 +108,18 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="RentBikeUI.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowBikeInfoControl.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowBikeInfoUI.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitUI.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitControl.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>

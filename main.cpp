@@ -1,8 +1,18 @@
 // 헤더 선언
 #include "User.h"
 #include "Bike.h"
-#include "LoginControl.h"
+#include "UserRepository.h"
+#include "BikeRepository.h"
+#include "SignUpUI.h"
 #include "LoginUI.h"
+#include "LogoutUI.h"
+#include "AddBikeUI.h"
+#include "RentBikeUI.h"
+#include "ShowBikeInfoUI.h"
+#include "LoginManager.h"
+#include "SignUpControl.h"
+#include "ExitUI.h"
+
 
 #include <iostream>
 #include <fstream>
@@ -17,10 +27,36 @@ using namespace std;
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 
+ifstream in_fp;
+ofstream out_fp;
+
+void doTask(SignUpUI& signUpUI, LoginUI& loginUI, LogoutUI& logoutUI,
+    AddBikeUI& addBikeUI, RentBikeUI& rentBikeUI, ShowBikeInfoUI& showBikeInfoUI, ExitUI& exitUI);
+
 int main() {
+    //저장소 및 control 선언
+    UserRepository userRepo;
+    BikeRepository bikeRepo;
+    SignUpControl signUpControl(&userRepo);
+    LoginManager loginManager(&userRepo);
+    AddBikeControl addBikeControl(&loginManager, &bikeRepo);
+    RentBikeControl rentBikeControl(&loginManager, &bikeRepo);
+    ShowBikeInfoControl showBikeInfoControl(&loginManager);
+    ExitControl exitControl;
+
+    //UI 객체 생성
+    SignUpUI signUpUI(&signUpControl);
+    LoginUI loginUI(&loginManager);
+    LogoutUI logoutUI(&loginManager);
+    AddBikeUI addBikeUI(&addBikeControl);
+    RentBikeUI rentBikeUI(&rentBikeControl);
+    ShowBikeInfoUI showBikeInfoUI(&showBikeInfoControl);
+    ExitUI exitUI(&exitControl);
+
+    // 초기 관리자 계정 추가
     signUpControl.addNewUser("admin", "admin");
 
-    // 파일 입출력을 위한 초기화
+    // 파일 열기
     in_fp.open(INPUT_FILE_NAME);
     out_fp.open(OUTPUT_FILE_NAME);
 
@@ -31,6 +67,8 @@ int main() {
 
     return 0;
 }
+
+
 void doTask(SignUpUI& signUpUI, LoginUI& loginUI, LogoutUI& logoutUI, AddBikeUI& addBikeUI, RentBikeUI& rentBikeUI, ShowBikeInfoUI& showBikeInfoUI, ExitUI& exitUI)
 {
     int menu_level_1 = 0, menu_level_2 = 0;
@@ -43,7 +81,7 @@ void doTask(SignUpUI& signUpUI, LoginUI& loginUI, LogoutUI& logoutUI, AddBikeUI&
         case 1:
             switch (menu_level_2) {
             case 1:
-                signUp(signUpUI);
+                signUpUI.startInterface(in_fp, out_fp);
                 break;
             }
             break;
@@ -51,10 +89,10 @@ void doTask(SignUpUI& signUpUI, LoginUI& loginUI, LogoutUI& logoutUI, AddBikeUI&
         case 2:
             switch (menu_level_2) {
             case 1:
-                login(loginUI);
+                loginUI.startInterface(in_fp, out_fp);
                 break;
             case 2:
-                logout(logoutUI);
+                logoutUI.startInterface(in_fp, out_fp);
                 break;
             }
             break;
@@ -62,7 +100,7 @@ void doTask(SignUpUI& signUpUI, LoginUI& loginUI, LogoutUI& logoutUI, AddBikeUI&
         case 3:
             switch (menu_level_2) {
             case 1:
-                registerBike(addBikeUI);
+                addBikeUI.startInterface(in_fp, out_fp);
                 break;
             }
             break;
@@ -70,7 +108,7 @@ void doTask(SignUpUI& signUpUI, LoginUI& loginUI, LogoutUI& logoutUI, AddBikeUI&
         case 4:
             switch (menu_level_2) {
             case 1:
-                rentBike(rentBikeUI);
+                rentBikeUI.startInterface(in_fp, out_fp);
                 break;
             }
             break;
@@ -78,7 +116,7 @@ void doTask(SignUpUI& signUpUI, LoginUI& loginUI, LogoutUI& logoutUI, AddBikeUI&
         case 5:
             switch (menu_level_2) {
             case 1:
-                rentingBikeInfo(showBikeInfoUI);
+                showBikeInfoUI.startInterface(out_fp);
                 break;
             }
             break;
@@ -86,7 +124,7 @@ void doTask(SignUpUI& signUpUI, LoginUI& loginUI, LogoutUI& logoutUI, AddBikeUI&
         case 6:
             switch (menu_level_2) {
             case 1:
-                exit(exitUI);
+                exitUI.startInterface(out_fp);
                 is_program_exit = 1;
                 break;
             }

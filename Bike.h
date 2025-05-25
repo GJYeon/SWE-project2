@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BIKE_H
+#define BIKE_H
 #include <string>
 #include <vector>
 using namespace std;
@@ -13,3 +14,5 @@ public:
     tuple<string, string> getBikeDetail();
     string getId();
 };
+
+#endif
