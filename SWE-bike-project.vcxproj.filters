@@ -30,6 +30,18 @@
     <ClCompile Include="BikeRepository.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="LoginUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LogoutUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SignUpControl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
@@ -42,6 +54,18 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="BikeRepository.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginUI.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginManager.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LogoutUI.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SignUpControl.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>

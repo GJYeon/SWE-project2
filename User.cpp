@@ -14,4 +14,4 @@ vector<Bike*> Customer::getRentingBikes() {
     return rentingBike;
 }
 
-Admin::Admin(string id, string pw, string role) : User(id, pw, role) {}
+Admin::Admin(string id, string pw, string role) : User(id, pw, "admin") {}

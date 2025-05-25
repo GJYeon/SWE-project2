@@ -1,4 +1,5 @@
-#pragma once
+#ifndef USER_H
+#define USER_H
 #include <string>
 #include <vector>
 #include "Bike.h"  
@@ -29,3 +30,5 @@ class Admin : public User {
 public:
     Admin(string id, string pw, string role);
 };
+
+#endif

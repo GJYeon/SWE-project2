@@ -129,15 +129,23 @@
   <ItemGroup>
     <ClCompile Include="Bike.cpp" />
     <ClCompile Include="BikeRepository.cpp" />
+    <ClCompile Include="LoginManager.cpp" />
+    <ClCompile Include="LoginUI.cpp" />
+    <ClCompile Include="LogoutUI.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SignUpControl.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="UserRepository.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bike.h" />
     <ClInclude Include="BikeRepository.h" />
+    <ClInclude Include="LoginUI.h" />
+    <ClInclude Include="LogoutUI.h" />
+    <ClInclude Include="SignUpControl.h" />
     <ClInclude Include="UserRepository.h" />
     <ClInclude Include="User.h" />
+    <ClInclude Include="LoginManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

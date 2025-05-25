@@ -1,10 +1,10 @@
 #include "userRepository.h"
 
-void UserRepository::addUser(const User& user) {
+void UserRepository::addUser(User* user) {
     users.push_back(user);
 }
 
-User* UserRepository::findUserById(const std::string& id) {
+User* UserRepository::findUserById(string id) {
     for (auto& user : users) {
         if (user.getId() == id) {
             return &user;
