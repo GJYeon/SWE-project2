@@ -128,11 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bike.cpp" />
+    <ClCompile Include="BikeRepository.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="UserRepository.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bike.h" />
+    <ClInclude Include="BikeRepository.h" />
+    <ClInclude Include="UserRepository.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

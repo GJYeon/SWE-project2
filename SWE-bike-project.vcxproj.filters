@@ -24,12 +24,24 @@
     <ClCompile Include="Bike.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="UserRepository.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BikeRepository.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="Bike.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="UserRepository.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BikeRepository.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
